@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<script src="JsBarcode.code128.min.js" charset="UTF-8"></script>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<form>
+			<label for="barcode">Barcode</label>
+			<input name="barcode" id="barcode" type="text" placeholder="Format: Code 128"></input>
+			<button>Apply</button>
+		</form>
+		<script>
+			const p = new URLSearchParams(document.location.search)
+            const barcode = p.get('barcode') || "D-USB-00005-H-01-SA-ng-sa"
+			JsBarcode("canvas", barcode)</script>
+	</body>
+</html>
